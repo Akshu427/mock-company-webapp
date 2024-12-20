@@ -3,14 +3,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './gradlew assemble'
+                // Runs the build step
+                bat 'gradlew.bat assemble'
             }
         }
         stage('Test') {
             steps {
-                sh './gradlew test'
+                // Runs the tests
+                bat 'gradlew.bat test'
             }
         }
     }
 }
- 
